@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Cormorant Regular';
+    src: url('../fonts/Cormorant_SC/CormorantSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'Cormorant Bold';
+    src: url('../fonts/Cormorant_SC/CormorantSC-Bold.ttf');
+}
+@font-face { 
+    font-family: 'Cormorant Light';
+    src: url('../fonts/Cormorant_SC/CormorantSC-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Misologist';
+    src: url('../fonts/Misologist.otf');
+}
+
+:root { 
+    --c-black: hsl(0, 0%, 3%);
+    --c-grey: hsl(0, 5%, 43%);
+    --c-white: hsl(0, 31%, 90%);
+    --c-red: hsl(0, 30%, 31%);
+}
+
+/* * { 
+    outline: 1px solid red;
+} */
+
+body { 
+    background-color: var(--c-black);
+    color: var(--c-white);
+    margin: 0;
+    font-family: 'Cormorant Regular', serif;
+    font-size: 32px;
+    box-sizing: border-box;
+}
