@@ -30,6 +30,11 @@ header {
         font-size: 1.6em;
         padding: 16px;
         user-select: none;
+
+        & img {
+            filter: invert(100%) hue-rotate(190deg) saturate(300%);
+            width: 140px;
+        }
     }
     
     & nav { 
@@ -41,38 +46,38 @@ header {
         gap: 24px;
         flex-wrap: wrap;
 
-        & a { 
+    }
 
-            white-space: nowrap;
-            font-size: 0.95em;
-            border: 1px solid var(--c-grey);
-            padding: 0 7px;
-            color: var(--c-grey);
-            text-decoration: none;
+}
 
-            &:hover { 
-                background-color: var(--c-white);
-                color: var(--c-black);
-                border: 1px solid var(--c-white);
-                transition: 0.2s;
-                position: relative;
+a { 
 
-                &::after { 
-                    content: "";
-                    display: inline;
-                    border: 1px solid var(--c-white);
-                    width: calc(100% - 0.5px);
-                    position: absolute;
-                    left: -0.5px; top: 40px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.95em;
+    border: 1px solid var(--c-grey);
+    padding: 0 7px;
+    color: var(--c-grey);
+    text-decoration: none;
 
-                    background-color: var(--c-grey);
-                    transition: 0.2s;
-                }
-            }
+    &:hover { 
+        background-color: var(--c-white);
+        color: var(--c-black);
+        border: 1px solid var(--c-white);
+        transition: 0.2s;
+        position: relative;
 
+        &::after { 
+            content: "";
+            display: inline;
+            border: 1px solid var(--c-white);
+            width: calc(100% - 0.5px);
+            position: absolute;
+            left: -0.5px; top: calc(100% + 3px);
+
+            background-color: var(--c-grey);
+            transition: 0.2s;
         }
-
-
     }
 
 }
@@ -137,7 +142,7 @@ main {
                 
                 & .progress-bar {
                     position: relative;
-                    font-family: 'Cormorant Bold';
+                    font-family: 'Cormorant Bold', serif;
                     font-size: 0.8em;
                     color: var(--c-black);
                     width: 100%; 
@@ -154,8 +159,73 @@ main {
             }
         }
 
+        & #progress-total { 
+            user-select: none;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+
     }
 
+}
+
+#scarlet-bride-promo { 
+    
+    & h2 { 
+        user-select: none;
+        font-family: 'Misologist';
+        font-weight: normal;
+        margin-bottom: 0;
+        
+    }
+    
+    & #promo-title { 
+        
+        text-align: center;
+
+        h3 { 
+            user-select: none;
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 0.75em;
+            color: var(--c-red-light);
+            text-shadow: 0 0 6px var(--c-white);
+        }
+    }
+    
+    & #promo-content { 
+
+        margin: auto;
+        display: grid;
+        width: 680px;
+        grid-template-columns: 340px 340px;
+        font-size: 0.8em;
+    
+        & img {
+            width: 340px;
+            height: 340px;
+            margin: 0;
+        }
+    
+        & div:last-child { 
+            
+            text-align: left;
+            margin-left: 12px;
+    
+            & h2 { 
+                font-size: 2.8em;
+            }
+
+            & a {
+                display: inline-block;
+                width: 94%;
+                margin-bottom: 12px;
+            }
+    
+        }
+    }
 }
 
 footer { 
@@ -195,6 +265,50 @@ footer {
         font-size: 0.7em;
         max-width: 280px;
         left: calc(50% - 165px);
+
+        & #progress-total {
+            margin-left: 24px;
+            font-size: 1.7em;
+        }
+    }
+
+}
+
+@media screen and (max-width: 720px) { 
+
+    #scarlet-bride-promo { 
+        
+        font-size: 0.8em;
+
+        & #promo-content { 
+            
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+
+            & div:last-child { 
+
+                margin-left: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & * { 
+                    position: relative;
+                    top: -24px;
+                }
+
+                & a { 
+                    font-size: 1.5em;
+                    display: inline;
+                    width: 190px;
+                }
+            
+            }
+
+        }
+
     }
 
 }
