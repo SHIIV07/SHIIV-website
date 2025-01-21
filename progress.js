@@ -1,4 +1,4 @@
-var tracksProgress = [50, 60, 50, 20, 15, 90];
+var tracksProgress = [50, 60, 60, 20, 20, 90];
 
 var tracksPercentage = document.querySelectorAll('.progress-bar');
 var tracksPercentageText = document.querySelectorAll('.progress-percentage');
