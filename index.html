@@ -16,7 +16,7 @@
 
     <header>
         <div id="logo">
-            <img src="img/shiiv_logo_vector.svg" alt="shiiv logo">
+            <img src="img/SVG/shiiv_logo_vector.svg" alt="shiiv logo">
         </div>
         <nav>
             <a target="_blank" href="https://www.youtube.com/@shiivofficial">YOUTUBE</a>
@@ -49,9 +49,14 @@
                     </div>
                 </li>
                 <li>
-                    ???
+                    FORGET EVERYTHING THAT YOU KNOW
                     <div class="progress-bar-border">
                         <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                    </div>
+                    <div class="track-preview-container">
+                        <audio name="forget everything" class="track-preview" src="audio/forget everything that you know preview.mp3"></audio>
+                        <img id="playback-button" onclick="playAndPause(this, document.getElementsByName('forget everything')[0])" src="img/SVG/play.svg" alt="playback-button">
+                        <input onmousemove="playbackChangeVolume(document.getElementsByName('forget everything')[0])" type="range" min="0" max="100" class="playback-volume" name="playback-volume" value="50">
                     </div>
                 </li>
                 <li>
@@ -100,6 +105,7 @@
                 <a target="_blank" href="https://open.spotify.com/playlist/2kN8pcbPVNOD7VHQG1sRtG?si=df3ec8f80b3b48f9">SPOTIFY</a>
                 <a href="#">???</a>
             </div>
+
         </div>
 
     </section>
@@ -110,6 +116,6 @@
         <p>&copy; 2024 SHIIV - All Rights Reserved.</p>
     </footer>
 
-    <script src="progress.js"></script>
+    <script src="script-main.js"></script>
 </body>
 </html>
