@@ -2,10 +2,10 @@
 
 var tracksProgress = [50, 60, 60, 20, 20, 90];
 
-var tracksPercentage = document.querySelectorAll('.progress-bar');
-var tracksPercentageText = document.querySelectorAll('.progress-percentage');
+const tracksPercentage = document.querySelectorAll('.progress-bar');
+const tracksPercentageText = document.querySelectorAll('.progress-percentage');
 
-var tracksPercentageTotalText = document.querySelector('#progress-total');
+const tracksPercentageTotalText = document.querySelector('#progress-total');
 var tracksPercentageTotalValue = 0;
 
 for (var i = 0; i < tracksPercentage.length; i++) { 
@@ -19,8 +19,10 @@ tracksPercentageTotalText.textContent = 'Total: ' +  Math.round(tracksPercentage
 // PREVIEW PLAYBACK
 
 var playbackButtonState = 'paused';
+const playbackVolumeSliders = document.querySelectorAll('.playback-volume');
+const playbackAudioId = document.querySelectorAll('.track-preview');
 function playAndPause(buttonId, audioId) { 
-
+    
     if (playbackButtonState == 'paused') { 
 
         buttonId.src = 'img/SVG/pause.svg';
@@ -42,9 +44,15 @@ function playAndPause(buttonId, audioId) {
 
 }
 
-function playbackChangeVolume(audioId) { 
+function playbackChangeVolume(audioId, audioIndex) { 
     
-    var volumeSlider = document.getElementsByName('playback-volume')[0];
+    var volumeSlider = playbackVolumeSliders[audioIndex];
     var volumeValue = volumeSlider.value;
     audioId.volume = volumeValue / 100;
+}
+
+for (var i = 0; i < playbackVolumeSliders.length; i++) { 
+    playbackVolumeSliders[i].addEventListener('mouseup', () => playbackChangeVolume(playbackAudioId[i-1], i-1));
+    playbackVolumeSliders[i].addEventListener('touchend', () => playbackChangeVolume(playbackAudioId[i-1], i-1));
+
 }
