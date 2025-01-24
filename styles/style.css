@@ -328,8 +328,6 @@ footer {
 @media screen and (width < 720px) { 
 
     #scarlet-bride-promo { 
-        
-        font-size: var(--fs-100);
 
         & #promo-content { 
             
@@ -353,7 +351,7 @@ footer {
                 & a { 
                     font-size: var(--fs-400);
                     display: inline;
-                    width: 190px;
+                    width: 210px;
                 }
             
             }
