@@ -46,8 +46,8 @@ function playAndPause(buttonId, audioId) {
 
 function playbackChangeVolume(audioId, audioIndex) { 
     
-    var volumeSlider = playbackVolumeSliders[audioIndex];
-    var volumeValue = volumeSlider.value;
+    let volumeSlider = playbackVolumeSliders[audioIndex];
+    let volumeValue = volumeSlider.value;
     audioId.volume = volumeValue / 100;
 }
 
