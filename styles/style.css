@@ -112,6 +112,7 @@ main {
     }
 
     & p { 
+
         color: var(--c-grey);
         line-height: var(--fs-300);
         text-align: center;
@@ -224,14 +225,15 @@ main {
         font-family: 'Misologist';
         font-weight: normal;
         margin-bottom: 0;
+        font-size: var(--fs-500);
         
-    }
-    
-    & #promo-title { 
+    }  
+
+    & #promo-title {   
         
         text-align: center;
 
-        h3 { 
+        & h3 { 
             user-select: none;
             margin-top: 0;
             font-weight: normal;
@@ -307,7 +309,9 @@ footer {
         }
     
         & p { 
-            font-size: var(--fs-100);
+            width: 70%;
+            margin: auto;
+            margin-bottom: 24px;
         }
     
         & #tracklist { 
@@ -323,11 +327,29 @@ footer {
 
     }
 
+    footer { 
+
+        font-size: var(--fs-050);
+
+    }
+
 }
 
 @media screen and (width < 720px) { 
 
     #scarlet-bride-promo { 
+
+        & #promo-title { 
+
+            & h2 { 
+                font-size: var(--fs-300);
+            }
+
+            & h3 { 
+                font-size: var(--fs-050);
+            }
+
+        }
 
         & #promo-content { 
             
