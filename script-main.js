@@ -18,28 +18,42 @@ tracksPercentageTotalText.textContent = 'Total: ' +  Math.round(tracksPercentage
 
 // PREVIEW PLAYBACK
 
-var playbackButtonState = 'paused';
 const playbackVolumeSliders = document.querySelectorAll('.playback-volume');
 const playbackAudioId = document.querySelectorAll('.track-preview');
 function playAndPause(buttonId, audioId) { 
     
-    if (playbackButtonState == 'paused') { 
+    if (buttonId.alt == 'paused') { 
 
+        audioPauseAll();
         buttonId.src = 'img/SVG/pause.svg';
-        playbackButtonState = 'playing';
+        buttonId.alt = 'playing';
+        audioId.currentTime = 0;
         audioId.play();
 
-    } else if (playbackButtonState == 'playing') {
+    } else if (buttonId.alt == 'playing') {
 
         buttonId.src = 'img/SVG/play.svg';
-        playbackButtonState = 'paused';
+        buttonId.alt = 'paused';
         audioId.pause();
 
     }
 
     audioId.onended = function() { 
         buttonId.src = 'img/SVG/play.svg';
-        playbackButtonState = 'paused';
+        buttonId.alt = 'paused';
+    }
+
+}
+
+function audioPauseAll() {  
+
+    let audiosToPause = document.querySelectorAll('audio');
+    let audiosToPauseImage = document.querySelectorAll('.playback-button');
+
+    for (var i = 0; i < audiosToPause.length; i++) {
+        audiosToPauseImage[i].src = 'img/SVG/play.svg';
+        audiosToPauseImage[i].alt = 'paused';
+        audiosToPause[i].pause();
     }
 
 }
@@ -52,7 +66,9 @@ function playbackChangeVolume(audioId, audioIndex) {
 }
 
 for (var i = 0; i < playbackVolumeSliders.length; i++) { 
-    playbackVolumeSliders[i].addEventListener('mouseup', () => playbackChangeVolume(playbackAudioId[i-1], i-1));
-    playbackVolumeSliders[i].addEventListener('touchend', () => playbackChangeVolume(playbackAudioId[i-1], i-1));
+
+    let volumeChangeArgs = [playbackAudioId[i], i];
+    playbackVolumeSliders[i].addEventListener('mouseup', () => playbackChangeVolume(volumeChangeArgs[0], volumeChangeArgs[1]));
+    playbackVolumeSliders[i].addEventListener('touchend', () => playbackChangeVolume(volumeChangeArgs[0], volumeChangeArgs[1]));
 
 }
