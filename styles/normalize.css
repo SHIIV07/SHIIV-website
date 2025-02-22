@@ -12,8 +12,18 @@
 }
 
 @font-face {
-    font-family: 'Misologist';
-    src: url('../fonts/Misologist.otf');
+    font-family: 'Kalnia Regular';
+    src: url('../fonts/Kalnia/static/Kalnia-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Kalnia Bold';
+    src: url('../fonts/Kalnia/static/Kalnia-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Kalnia Light';
+    src: url('../fonts/Kalnia/static/Kalnia-Light.ttf');
 }
 
 :root { 
@@ -22,8 +32,8 @@
     --c-black: hsl(0, 0%, 3%);
     --c-grey: hsl(0, 5%, 43%);
     --c-white: hsl(0, 31%, 90%);
-    --c-red: hsl(0, 30%, 31%);
-    --c-red-light: hsl(0, 46%, 44%);
+    --c-purple: hsl(283, 30%, 31%);
+    --c-purple-light: hsl(307, 46%, 44%);
 
     /* FONT SIZES */
 

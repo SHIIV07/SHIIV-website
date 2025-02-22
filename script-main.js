@@ -1,6 +1,6 @@
 // PERCENTAGE CALCULATIONS
 
-var tracksProgress = [100, 100, 60, 60, 60, 90];
+var tracksProgress = [100, 100, 100, 60, 60, 90];
 
 const tracksPercentage = document.querySelectorAll('.progress-bar');
 const tracksPercentageText = document.querySelectorAll('.progress-percentage');
