@@ -251,22 +251,25 @@ main {
     
     & #promo-content { 
 
-        margin: auto;
-        display: grid;
-        width: 680px;
-        grid-template-columns: 340px 340px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
         font-size: var(--fs-100);
     
         & img {
-            width: 340px;
-            height: 340px;
-            margin: 0;
+            width: 385px;
+            height: 385px;
         }
     
         & div:last-child { 
             
-            margin-left: 12px;
-            margin-top: 30px;
+            width: 385px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 345px;
     
             & h2 { 
                 font-size: var(--fs-600);
@@ -275,7 +278,7 @@ main {
 
             & a {
                 display: inline-block;
-                width: 94%;
+                width: 85%;
                 margin-bottom: 12px;
             }
     
@@ -306,63 +309,9 @@ footer {
         }
     }
 
-    main { 
-
-    }
-
     footer { 
 
         font-size: var(--fs-050);
-
-    }
-
-}
-
-@media screen and (width < 720px) { 
-
-    #scarlet-bride-promo { 
-
-        & #promo-title { 
-
-            & h2 { 
-                font-size: var(--fs-300);
-            }
-
-            & h3 { 
-                font-size: var(--fs-050);
-            }
-
-        }
-
-        & #promo-content { 
-            
-            width: 340px;
-            display: flex;
-            flex-direction: column;
-
-            & div:last-child { 
-
-                margin-left: 0;
-                margin-top: 0;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                & * { 
-                    position: relative;
-                    top: -24px;
-                }
-
-                & a { 
-                    font-size: var(--fs-400);
-                    display: inline;
-                    width: 210px;
-                }
-            
-            }
-
-        }
 
     }
 
@@ -384,6 +333,45 @@ footer {
     #ep-container { 
 
         flex-direction: column;
+
+    }
+
+    main #progress-total { 
+
+        font-size: var(--fs-400);
+
+    }
+
+    #scarlet-bride-promo { 
+
+        & #promo-title { 
+
+            & h2 { 
+                font-size: var(--fs-400);
+            }
+
+        }
+
+        & #promo-content { 
+            
+            flex-direction: column;
+            align-items: center;
+
+            & div:last-child { 
+
+                justify-content: unset;
+                font-size: var(--fs-300);
+                height: 300px;
+
+                & a { 
+                    font-size: var(--fs-300);
+                    display: inline;
+                    width: 210px;
+                }
+            
+            }
+
+        }
 
     }
 
