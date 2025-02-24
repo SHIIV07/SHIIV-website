@@ -29,65 +29,70 @@
     <div class="seperation"></div>
 
     <main>
+
         <div id="ep-title">
             <h1>H/E/L/L</h1>
             <h3>SHIIV EP4 / Her eyes  lull the lambs</h3>
+            <p>The Core has been slit wide open. <br> Forget everything that you know.</p>
         </div>
-        <p>The Core has been slit wide open. <br> Forget everything that you know.</p>
-        <div><img src="img/HELL-ep-cover-hidden.png" alt="HELL ep cover hidden"></div>
-        <div id="tracklist">
-            <ol>
-                <li>
-                    WHO WILL LEAD THEM NOW?
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                </li>
-                <li>
-                    DREAM ESCAPE
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                </li>
-                <li>
-                    FORGET EVERYTHING THAT YOU KNOW
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                    <div class="track-preview-container">
-                        <audio id="track-3" class="track-preview" src="audio/preview-track3.mp3"></audio>
-                        <img class="playback-button" onclick="playAndPause(this, document.getElementById('track-3'))" src="img/SVG/play.svg" alt="paused">
-                        <input type="range" min="0" max="100" class="playback-volume" value="100">
-                    </div>
-                </li>
-                <li>
-                    ???
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                </li>
-                <li>
-                    ???
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                </li>
-                <li>
-                    HER EYES LULL THE LAMBS
-                    <div class="progress-bar-border">
-                        <div class="progress-bar"><span class="progress-percentage">100%</span></div>
-                    </div>
-                    <div class="track-preview-container">
-                        <audio id="track-6" class="track-preview" src="audio/preview-track6.mp3"></audio>
-                        <img class="playback-button" onclick="playAndPause(this, document.getElementById('track-6'))" src="img/SVG/play.svg" alt="paused">
-                        <input type="range" min="0" max="100" class="playback-volume" value="100">
-                    </div>
-                </li>
-            </ol>
 
-            <div id="progress-total">Total: 100%</div>
+        <article id="ep-container">
+            <div><img id="coverart" src="img/HELL-ep-cover-hidden.png" alt="HELL ep cover hidden"></div>
+            <div id="tracklist">
+                <ol>
+                    <li>
+                        WHO WILL LEAD THEM NOW?
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        DREAM ESCAPE
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        FORGET EVERYTHING THAT YOU KNOW
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                        <div class="track-preview-container">
+                            <audio id="track-3" class="track-preview" src="audio/preview-track3.mp3"></audio>
+                            <img class="playback-button" onclick="playAndPause(this, document.getElementById('track-3'))" src="img/SVG/play.svg" alt="paused">
+                            <input type="range" min="0" max="100" class="playback-volume" value="100">
+                        </div>
+                    </li>
+                    <li>
+                        ???
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        ???
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        HER EYES LULL THE LAMBS
+                        <div class="progress-bar-border">
+                            <div class="progress-bar"><span class="progress-percentage">100%</span></div>
+                        </div>
+                        <div class="track-preview-container">
+                            <audio id="track-6" class="track-preview" src="audio/preview-track6.mp3"></audio>
+                            <img class="playback-button" onclick="playAndPause(this, document.getElementById('track-6'))" src="img/SVG/play.svg" alt="paused">
+                            <input type="range" min="0" max="100" class="playback-volume" value="100">
+                        </div>
+                    </li>
+                </ol>
+    
+            </div>
 
-        </div>
+        </article>
+
+        <div id="progress-total">Total: 100%</div>
 
     </main>
 
