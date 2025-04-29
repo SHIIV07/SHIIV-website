@@ -130,101 +130,12 @@ main {
         & #coverart { 
             max-width: 385px;
         }
-    
-        & #tracklist { 
-            
-            font-size: var(--fs-050);
-            max-width: 357px;
-            line-height: var(--fs-400);
-    
-            & ol li { 
-                margin-bottom: 12px;
-    
-                & .progress-bar-border { 
-                    border: 4px solid hsla(0, 0%, 0%, 0);
-                    outline: 2px solid var(--c-grey);
-                    height: 24px;
-                    
-                    & .progress-bar {
-                        position: relative;
-                        font-family: 'Cormorant Bold', serif;
-                        font-size: var(--fs-300);
-                        color: var(--c-black);
-                        width: 100%; 
-                        height: 100%;
-                        background-color: var(--c-white);
-    
-                        & .progress-percentage { 
-                            text-shadow: 0 0 8px var(--c-white);
-                            position: absolute;
-                            left: 11px; top: -4px;
-                            user-select: none;
-                        }
-                    }
-                }
-            }
-    
-            & .track-preview-container { 
-    
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                background-color: var(--c-black);
-                padding: 6px;
-                margin-top: 12px;
-                outline: 2px solid var(--c-grey);
-    
-                & img { 
-                    position: relative;
-                    left: 0;
-                    width: 16px;
-                    aspect-ratio: 1;
-                    filter: sepia(100%) hue-rotate(-50deg) saturate(180%);
-                    transition: 0.2s;
-    
-                    &:hover {
-                        transform: scale(1.2);
-                        transition: 0.1s;
-                    }
-                }
-    
-                & .playback-volume { 
-                    
-                    background: none;
-                    appearance: none;
-                    width: 140px;
-                    height: 12px;
-    
-                    border: 2px solid var(--c-white);
-    
-                    &::-webkit-slider-thumb { 
-                        appearance: none;
-                        width: 7px;
-                        height: 12px;
-                        background-color: var(--c-white);
-                        cursor: pointer;
-                    }
-    
-                }
-    
-            }
-    
-        }
 
-    }
-
-    & #progress-total { 
-        user-select: none;
-        text-align: center;
-        font-size: var(--fs-600);
-        font-family: 'Kalnia Regular', sans-serif;
-        margin-top: 64px;
-        margin-bottom: 64px;
     }
 
 }
 
-#scarlet-bride-promo { 
+#scarlet-bride-promo, #hell-promo { 
     
     & h2 { 
         user-select: none;
@@ -274,6 +185,7 @@ main {
             & h2 { 
                 font-size: var(--fs-600);
                 text-align: center;
+                margin-bottom: 24px;
             }
 
             & a {
@@ -336,13 +248,7 @@ footer {
 
     }
 
-    main #progress-total { 
-
-        font-size: var(--fs-400);
-
-    }
-
-    #scarlet-bride-promo { 
+    #scarlet-bride-promo, #hell-promo { 
 
         & #promo-title { 
 
