@@ -169,8 +169,8 @@ main {
         font-size: var(--fs-100);
     
         & img {
-            width: 385px;
-            height: 385px;
+            width: 345px;
+            height: 345px;
         }
     
         & div:last-child { 
