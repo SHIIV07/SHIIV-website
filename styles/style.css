@@ -268,7 +268,7 @@ footer {
         height: 300px;    
     }
 
-    div:last-child a { 
+    #promo-content div:last-child a { 
         font-size: var(--fs-200);
         display: inline;
         width: 210px;
