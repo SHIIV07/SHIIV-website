@@ -1,6 +1,6 @@
 // PERCENTAGE CALCULATIONS
 
-const phaseProgress = [75, 10, 0];
+const phaseProgress = [100, 10, 0];
 
 const phasePercentage = document.querySelectorAll('.progress-bar');
 const phasePercentageText = document.querySelectorAll('.progress-percentage');
