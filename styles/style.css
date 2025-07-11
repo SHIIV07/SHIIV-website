@@ -35,7 +35,7 @@ header {
     width: 180px;
 }
 
-header nav { 
+header nav, #contact nav { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,6 +168,32 @@ main p {
     font-size: var(--fs-500);
 }
 
+#comms-promo h2 {
+
+    user-select: none;
+    font-family: 'Kalnia Bold', sans-serif;
+    font-weight: normal;
+    margin-bottom: 0;
+    font-size: var(--fs-500);
+    color: var(--yellow);
+
+}
+
+#comms-promo #promo-title { 
+
+    margin-bottom: 24px;
+
+}
+
+#contact p { 
+
+    font-family: 'Kalnia Regular', sans-serif;
+    color: var(--c-white);
+    font-size: var(--fs-100);
+    margin-bottom: -10px;
+
+}
+
 #promo-title {        
     text-align: center;
 }
@@ -276,5 +302,11 @@ footer {
 
     #promo-title h2 {  
         font-size: var(--fs-400);
+    }
+
+    #comms-promo {
+
+        margin-bottom: -64px;
+
     }
 }
